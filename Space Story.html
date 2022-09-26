@@ -108,9 +108,9 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 [[Top deck]]
 
-&lt;&lt;set $notes to &quot;hi!&quot;&gt;&gt;
+&lt;&lt;set $notes to &quot;My Notes:&quot;&gt;&gt;
 &lt;&lt;set $note to &quot;&quot;&gt;&gt;
-&lt;&lt;set $location to &quot;entrance&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Check notes" tags="" position="804,780" size="100,100">Captain&#39;s Account: &quot;I heard a loud bang. the first mate was on duty, and I didn&#39;t ever see anything, but when I came out of my cabin, we were already taking on water. We quickly fire retaliation shots, and even though we couldn&#39;t see them, the pirates must have been either spooked or sunk, because they didn&#39;t attack again. I did my best to save //The Moon//, but all I could do was get her up onto the rocks to keep her from sinking further. My first mate, Radley Sween, was killed in the attack.
+&lt;&lt;set $location to &quot;entrance&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Check notes" tags="" position="800,775" size="100,100">Captain&#39;s Account: &quot;I heard a loud bang. the first mate was on duty, and I didn&#39;t ever see anything, but when I came out of my cabin, we were already taking on water. We quickly fire retaliation shots, and even though we couldn&#39;t see them, the pirates must have been either spooked or sunk, because they didn&#39;t attack again. I did my best to save //The Moon//, but all I could do was get her up onto the rocks to keep her from sinking further. My first mate, Radley Sween, was killed in the attack.
 
 &lt;&lt;if $location is &quot;entrance&quot;&gt;&gt;
 [[Return|Climb aboard]]
@@ -134,13 +134,16 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 [[Check notes]] 
 
-&lt;&lt;set $location to &quot;Top deck&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Captain&#39;s cabin" tags="" position="1200,599" size="100,100">You wade into the murky water. Empty bottles and bits of half-eaten food float listlessly in the shifting sludge. Fortunately, the chest containing the important papers of the ship is floating, undamaged.
+&lt;&lt;set $location to &quot;Top deck&quot;&gt;&gt;
+
+&#39;&#39;Note:&#39;&#39;
+&lt;&lt;textbox &quot;$note&quot; &quot;&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Captain&#39;s cabin" tags="" position="1200,599" size="100,100">You wade into the murky water. Empty bottles and bits of half-eaten food float listlessly in the shifting sludge. Fortunately, the chest containing the important papers of the ship is floating, undamaged.
 
 [[Open the chest]]
 
 [[Search beneath the water]]
 
-[[Return to the deck|Top deck]]</tw-passagedata><tw-passagedata pid="7" name="Middle deck" tags="" position="1002,1000" size="100,100">[[1st Mate&#39;s Cabin]] 
+[[Return to the deck|Top deck]]</tw-passagedata><tw-passagedata pid="7" name="Middle deck" tags="" position="1000,1000" size="100,100">[[1st Mate&#39;s Cabin]] 
 [[Crew Cabin]]
 
 [[Top deck]] 
@@ -166,7 +169,10 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 [[Check notes]] 
 
-&lt;&lt;set $location to &quot;Lower deck&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Read the Journal" tags="" position="1400,909.6666870117188" size="100,100">[[Return|1st Mate&#39;s Cabin]]</tw-passagedata><tw-passagedata pid="15" name="Booze Stash" tags="" position="1400,1060.6666870117188" size="100,100">[[Return|1st Mate&#39;s Cabin]]</tw-passagedata><tw-passagedata pid="16" name="Cargo hold" tags="" position="1205,1242.6666870117188" size="100,100">[[Missing food]]
+&lt;&lt;set $location to &quot;Lower deck&quot;&gt;&gt;
+
+&#39;&#39;Note:&#39;&#39;
+&lt;&lt;textbox &quot;$note&quot; &quot;&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Read the Journal" tags="" position="1400,909.6666870117188" size="100,100">[[Return|1st Mate&#39;s Cabin]]</tw-passagedata><tw-passagedata pid="15" name="Booze Stash" tags="" position="1400,1060.6666870117188" size="100,100">[[Return|1st Mate&#39;s Cabin]]</tw-passagedata><tw-passagedata pid="16" name="Cargo hold" tags="" position="1205,1242.6666870117188" size="100,100">[[Missing food]]
 [[Return|Lower deck]] </tw-passagedata><tw-passagedata pid="17" name="Hole in the hull" tags="" position="1204,1382.3333129882812" size="100,100">[[Return|Lower deck]] </tw-passagedata><tw-passagedata pid="18" name="Missing food" tags="" position="1361,1240.3333129882812" size="100,100">[[Return|Cargo hold]] </tw-passagedata><tw-passagedata pid="19" name="Crew Cabin" tags="" position="800.3333435058594,999.6666870117188" size="100,100">[[Crew account of attack]] 
 [[Gunpowder use]] 
 [[Commisary]] 
