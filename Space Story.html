@@ -100,7 +100,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	</div>
 	<tw-storydata name="Space Story" startnode="1" creator="Twine" creator-version="2.4.1" format="SugarCube" format-version="2.36.1" ifid="3F89AC70-14C1-4FB0-BBF0-B1D2E589FA25" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Opening" tags="" position="800,350" size="100,100">Rain comes rushing down in stinging waves as the rowboat inches ever closer to the wreckage. You pull your coat closer and stare ahead, trying to catch a glimpse of your destination in the inky darkness. There is a sudden flash, and in the brief window of illumination, you finally see the outline of //The Blue Moon//, its hull jarred up onto the rocks near the the shore. Sickening groans fill the air as the waves lift it higher, then lower, then back again, all the while the breach in the hull widens just a little more with each motion. But it hasn&#39;t sunk yet. You hope that that remains the case.
 
-[[Continue]]</tw-passagedata><tw-passagedata pid="2" name="Continue" tags="" position="800,475" size="100,100">The rowbaot bumps agains the shifting hull with a dull thud, a sound echoed by another booming peal of thunder that sends goosebumps across your flesh. The gruff man at the helm settles down and looks at you expectantly. You don&#39;t know his name and he never asked for yours. But his job is done. You&#39;re the insurance inspector, and it&#39;s up to you to determine what killed //The Blue Moon//.
+[[Continue]]</tw-passagedata><tw-passagedata pid="2" name="Continue" tags="" position="800,475" size="100,100">The rowboat bumps agains the shifting hull with a dull thud, a sound echoed by another booming peal of thunder that sends goosebumps across your flesh. The gruff man at the helm settles down and looks at you expectantly. You don&#39;t know his name and he never asked for yours. But his job is done. You&#39;re the insurance inspector, and it&#39;s up to you to determine what killed //The Blue Moon//.
 
 [[Climb aboard]]</tw-passagedata><tw-passagedata pid="3" name="Climb aboard" tags="" position="800,600" size="100,100">It takes a moment for you to find your balance. You aren&#39;t a sailor, and the shifting deck would already be offputting under normal circumstances. The fact that it jammed up at a 45 degree angle certainly isn&#39;t helping things. With a sigh, you pull out your notebook and get to work.
 
@@ -111,6 +111,9 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 &lt;&lt;set $notes to &quot;My Notes:&quot;&gt;&gt;
 &lt;&lt;set $note to &quot;&quot;&gt;&gt;
 &lt;&lt;set $location to &quot;entrance&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Check notes" tags="" position="800,775" size="100,100">Captain&#39;s Account: &quot;I heard a loud bang. the first mate was on duty, and I didn&#39;t ever see anything, but when I came out of my cabin, we were already taking on water. We quickly fire retaliation shots, and even though we couldn&#39;t see them, the pirates must have been either spooked or sunk, because they didn&#39;t attack again. I did my best to save //The Moon//, but all I could do was get her up onto the rocks to keep her from sinking further. My first mate, Radley Sween, was killed in the attack.
+
+&lt;&lt;set $notes to $notes + &quot;\n&quot; + $note&gt;&gt;
+&lt;&lt;print $notes&gt;&gt;
 
 &lt;&lt;if $location is &quot;entrance&quot;&gt;&gt;
 [[Return|Climb aboard]]
@@ -123,10 +126,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $location is &quot;Lower deck&quot;&gt;&gt;
 [[Return|Lower deck]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;set $notes to $notes + &quot;\n&quot; + $note&gt;&gt;
-&lt;&lt;print $notes&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Top deck" tags="" position="1001,594" size="100,100">The captain&#39;s cabin lies at the back of the boat, it is mostly submerged. Towrds the front, stairs descend into the middle deck. Where will you go?
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Top deck" tags="" position="1001,594" size="100,100">The captain&#39;s cabin lies at the back of the boat, it is mostly submerged. Towrds the front, stairs descend into the middle deck. Where will you go?
 
 [[Captain&#39;s cabin]]
 
@@ -136,8 +136,9 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 &lt;&lt;set $location to &quot;Top deck&quot;&gt;&gt;
 
-&#39;&#39;Note:&#39;&#39;
-&lt;&lt;textbox &quot;$note&quot; &quot;&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Captain&#39;s cabin" tags="" position="1200,599" size="100,100">You wade into the murky water. Empty bottles and bits of half-eaten food float listlessly in the shifting sludge. Fortunately, the chest containing the important papers of the ship is floating, undamaged.
+&#39;&#39;Add a Note:&#39;&#39;
+&lt;&lt;textbox &quot;$note&quot; &quot;&quot;&gt;&gt;
+[[Enter note|Check notes]]</tw-passagedata><tw-passagedata pid="6" name="Captain&#39;s cabin" tags="" position="1200,599" size="100,100">You wade into the murky water. Empty bottles and bits of half-eaten food float listlessly in the shifting sludge. Fortunately, the chest containing the important papers of the ship is floating, undamaged.
 
 [[Open the chest]]
 
@@ -153,8 +154,9 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 &lt;&lt;set $location to &quot;Middle deck&quot;&gt;&gt;
 
-&#39;&#39;Note:&#39;&#39;
-&lt;&lt;textbox &quot;$note&quot; &quot;&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Open the chest" tags="" position="1332,644" size="100,100">You find a captain&#39;s log and a travel log.
+&#39;&#39;Add a Note:&#39;&#39;
+&lt;&lt;textbox &quot;$note&quot; &quot;&quot;&gt;&gt;
+[[Enter note|Check notes]]</tw-passagedata><tw-passagedata pid="8" name="Open the chest" tags="" position="1332,644" size="100,100">You find a captain&#39;s log and a travel log.
 
 [[Read the captain&#39;s log]]
 
@@ -171,8 +173,9 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 &lt;&lt;set $location to &quot;Lower deck&quot;&gt;&gt;
 
-&#39;&#39;Note:&#39;&#39;
-&lt;&lt;textbox &quot;$note&quot; &quot;&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Read the Journal" tags="" position="1400,909.6666870117188" size="100,100">[[Return|1st Mate&#39;s Cabin]]</tw-passagedata><tw-passagedata pid="15" name="Booze Stash" tags="" position="1400,1060.6666870117188" size="100,100">[[Return|1st Mate&#39;s Cabin]]</tw-passagedata><tw-passagedata pid="16" name="Cargo hold" tags="" position="1205,1242.6666870117188" size="100,100">[[Missing food]]
+&#39;&#39;Add a Note:&#39;&#39;
+&lt;&lt;textbox &quot;$note&quot; &quot;&quot;&gt;&gt;
+[[Enter note|Check notes]]</tw-passagedata><tw-passagedata pid="14" name="Read the Journal" tags="" position="1400,909.6666870117188" size="100,100">[[Return|1st Mate&#39;s Cabin]]</tw-passagedata><tw-passagedata pid="15" name="Booze Stash" tags="" position="1400,1060.6666870117188" size="100,100">[[Return|1st Mate&#39;s Cabin]]</tw-passagedata><tw-passagedata pid="16" name="Cargo hold" tags="" position="1205,1242.6666870117188" size="100,100">[[Missing food]]
 [[Return|Lower deck]] </tw-passagedata><tw-passagedata pid="17" name="Hole in the hull" tags="" position="1204,1382.3333129882812" size="100,100">[[Return|Lower deck]] </tw-passagedata><tw-passagedata pid="18" name="Missing food" tags="" position="1361,1240.3333129882812" size="100,100">[[Return|Cargo hold]] </tw-passagedata><tw-passagedata pid="19" name="Crew Cabin" tags="" position="800.3333435058594,999.6666870117188" size="100,100">[[Crew account of attack]] 
 [[Gunpowder use]] 
 [[Commisary]] 
